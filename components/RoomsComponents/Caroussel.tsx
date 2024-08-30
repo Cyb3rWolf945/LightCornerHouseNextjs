@@ -4,7 +4,12 @@ import { Button } from "@nextui-org/button"
 import { Image } from "@nextui-org/image"
 import { useEffect, useState } from "react"
 
-export const Caroussel = ({ Photos }) => {
+// Define the type for the Photos prop
+interface CarousselProps {
+    Photos: string[];
+}
+
+export const Caroussel = ({ Photos }: CarousselProps) => {
     const [TotalPhotos, setTotalPhotos] = useState(0);
     const [initialPhoto, setInitialPhoto] = useState('');
     const [position, setPosition] = useState(0);
